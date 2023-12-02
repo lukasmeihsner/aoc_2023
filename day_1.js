@@ -1,14 +1,12 @@
 const fs = require("node:fs");
 
-let lines;
-
 fs.readFile("./day_1.txt", "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
   }
 
-  lines = data.split("\n");
+  const lines = data.split("\n");
 
   console.log(part2(lines));
 });
